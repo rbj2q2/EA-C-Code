@@ -1,0 +1,663 @@
+(gdb) backtrace full
+#0  0x00007ffff722bc37 in __GI_raise (sig=sig@entry=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:56
+        resultvar = 0
+        pid = 25396
+        selftid = 25396
+#1  0x00007ffff722f028 in __GI_abort () at abort.c:89
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x7fffffffd770,
+            sa_sigaction = 0x7fffffffd770}, sa_mask = {__val = {
+              140737488345392, 6548712, 140737351947559, 140733193388033, 0,
+              140737343342696, 140737339440432, 140737343342696, 6548712,
+              6548640, 140737351976149, 140737353922400, 140737340376848, 1,
+              140737353924752, 6548496}}, sa_flags = 10,
+          sa_restorer = 0x7ffff7fcb780}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007ffff7b36535 in __gnu_cxx::__verbose_terminate_handler() ()
+   from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#3  0x00007ffff7b346d6 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#4  0x00007ffff7b34703 in std::terminate() ()
+   from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+---Type <return> to continue, or q <return> to quit---
+#5  0x00007ffff7b34922 in __cxa_throw ()
+   from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#6  0x00007ffff7b86447 in std::__throw_out_of_range(char const*) ()
+   from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+No symbol table info available.
+#7  0x0000000000403cc5 in _M_range_check (__n=<optimized out>,
+    this=<optimized out>) at /usr/include/c++/4.8/bits/stl_vector.h:794
+No locals.
+#8  at (__n=<optimized out>, this=<optimized out>)
+    at /usr/include/c++/4.8/bits/stl_vector.h:812
+No locals.
+#9  Game::validPosition (this=this@entry=0x7fffffffd930, valid="",
+    xPos=xPos@entry=9, yPos=yPos@entry=-1, board=...) at src/game.cpp:214
+No locals.
+#10 0x0000000000406222 in Game::runGame (this=this@entry=0x7fffffffd930,
+    pillDensity=<optimized out>, wallDensity=<optimized out>,
+    textOutput="m 0 0\n1 9 14\n2 9 14\n3 9 14\np 0 4\np 0 9\nw 1 0\nw 1 1\nw 1 2\nw 1 3\nw 1 5\nw 1 6\nw 1 7\nw 1 8\nw 1 9\nw 1 10\nw 1 11\nw 1 12\np 1 14\nw 2 0\np 2 4\np 2 5\np 2 6\np 2 14\np 3 4\np 3 5\np 3 11\np 3 12\np 3 14\np 4 1\np 4 3\np 4"..., pac=..., parsimonyPressure=0.300000012, ghost=...,
+    ghostParsimony=0.300000012) at src/game.cpp:82
+        i = 0
+---Type <return> to continue, or q <return> to quit---
+        valid = ""
+        vectorOfGhosts = std::vector of length 3, capacity 4 = {
+          std::tuple containing = {[1] = 9, [2] = -1},
+          std::tuple containing = {[1] = 9, [2] = 13},
+          std::tuple containing = {[1] = 4, [2] = 4}}
+        board = {pillCount = 32, emptySpaces = 74, fruitOnBoard = true,
+          fruitX = 3, fruitY = 6, boardHeight = 15, boardWidth = 10,
+          map = std::vector of length 15, capacity 16 = {
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 87 'W',
+              69 'E', 69 'E', 87 'W', 87 'W', 87 'W', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              69 'E', 80 'P', 87 'W', 87 'W', 87 'W', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              69 'E', 69 'E', 87 'W', 87 'W', 87 'W', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              69 'E', 80 'P', 87 'W', 69 'E', 87 'W', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 69 'E', 80 'P',
+              80 'P', 80 'P', 80 'P', 69 'E', 69 'E', 80 'P', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 80 'P',
+              80 'P', 69 'E', 87 'W', 69 'E', 87 'W', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 80 'P',
+              70 'F', 69 'E', 87 'W', 80 'P', 80 'P', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+---Type <return> to continue, or q <return> to quit---
+              69 'E', 80 'P', 87 'W', 69 'E', 69 'E', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              69 'E', 80 'P', 87 'W', 69 'E', 80 'P', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {80 'P', 87 'W', 69 'E',
+              69 'E', 69 'E', 87 'W', 80 'P', 69 'E', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              69 'E', 69 'E', 87 'W', 69 'E', 69 'E', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              80 'P', 80 'P', 87 'W', 80 'P', 69 'E', 87 'W', 87 'W'},
+            std::vector of length 10, capacity 16 = {69 'E', 87 'W', 69 'E',
+              80 'P', 69 'E', 87 'W', 69 'E', 80 'P', 87 'W', 69 'E'},
+            std::vector of length 10, capacity 16 = {69 'E', 69 'E', 69 'E',
+              69 'E', 69 'E', 87 'W', 69 'E', 80 'P', 87 'W', 80 'P'},
+            std::vector of length 10, capacity 16 = {69 'E', 80 'P', 80 'P',
+              80 'P', 80 'P', 69 'E', 69 'E', 80 'P', 80 'P', 80 'P'}}}
+        maxPills = 32
+#11 0x00000000004112af in Run::evaluate (this=this@entry=0x7fffffffe050,
+    pac=..., ghost=..., run=run@entry=1, output=..., parsedList=...)
+    at src/run.cpp:546
+        game = {width = 10, height = 15, fruitScore = 10, baseTime = 300,
+          fruitSpawning = 0.0500000007, currentTime = 283, currentPills = 1,
+          currentFruitTotal = 0, playing = true,
+          ghosts = std::vector of length 3, capacity 4 = {{validator = {
+---Type <return> to continue, or q <return> to quit---
+                root = std::vector of length 7, capacity 7 = {"-", "-", "+",
+                  "rand", "rand", "pac", "ghost"}, size = 0}, prevX = 9,
+              prevY = 0, xPosition = 9, yPosition = -1, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "-", "+",
+                  "rand", "rand", "pac", "ghost"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 13, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "-", "+",
+                  "rand", "rand", "pac", "ghost"}, size = 0}, prevX = 5,
+              prevY = 4, xPosition = 4, yPosition = 4, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}}}
+#12 0x00000000004116fd in Run::evaluatePopulation (
+    this=this@entry=0x7fffffffe050, run=run@entry=1, output=...,
+    parsedList=...) at src/run.cpp:99
+        baseInit = 50
+        lowerIsGhost = true
+        individualsProcessed = 0
+#13 0x000000000041f81c in Run::performEvals (this=this@entry=0x7fffffffe050,
+    parsedList=..., output=..., run=run@entry=1) at src/run.cpp:61
+        stagnantGenerations = 0
+#14 0x00000000004201e5 in Run::performRuns (this=this@entry=0x7fffffffe050,
+    parsedList=..., output=...) at src/run.cpp:26
+---Type <return> to continue, or q <return> to quit---
+        runNum = 1
+#15 0x000000000040268e in main (argc=<optimized out>, argv=<optimized out>)
+    at src/main.cpp:21
+        parsedList = {solution = "solutions/medium.sol",
+          output = "logs/medium.log", worldFileOutput = "games/medium.txt",
+          timerInitialized = true, rngSeed = 42, runs = 1, evals = 200,
+          height = 15, width = 10, pillDensity = 0.300000012,
+          wallDensity = 0.300000012, fruitSpawning = 0.0500000007,
+          timeMultiplier = 2, fruitScore = 10, representation = "Tree",
+          initialization = "Ramped",
+          parentSelection = "FitnessProportionalSelection",
+          recombination = "Sub-TreeCrossover", mutation = "Sub-TreeMutation",
+          survival = "k-Tournament", bloatControl = "ParsimonyPressure",
+          termination = "noChangeInBestFitnessForNGenerations", pacMu = 50,
+          pacLambdaValue = 25, pacK = 10, pacP = 0.300000012, maxEvals = 2000,
+          n = 2000, treeDepth = 3, recomChance = 0.899999976,
+          topChosenPercent = 0.200000003, percentFromTop = 0.800000012,
+          numPacMen = 1, samePacController = true,
+          ghostRepresentation = "Tree", ghostInitialization = "Ramped",
+          ghostParentSelection = "Over-Selection",
+          ghostRecombination = "Sub-TreeCrossover",
+          ghostMutation = "Sub-TreeMutation", ghostSurvival = "Truncation",
+          ghostMu = 50, ghostLambdaValue = 25, ghostK = 10,
+---Type <return> to continue, or q <return> to quit---
+          ghostP = 0.300000012}
+        output = {logOut = "logs/medium.log",
+          solution = "solutions/medium.sol", worldFile = "games/medium.txt"}
+        run = {globalHighScore = -1, bestWorld = "", evalNum = 1,
+          highScore = -1, ended = false,
+          textOutput = "m 0 0\n1 9 14\n2 9 14\n3 9 14\np 0 4\np 0 9\nw 1 0\nw 1 1\nw 1 2\nw 1 3\nw 1 5\nw 1 6\nw 1 7\nw 1 8\nw 1 9\nw 1 10\nw 1 11\nw 1 12\np 1 14\nw 2 0\np 2 4\np 2 5\np 2 6\np 2 14\np 3 4\np 3 5\np 3 11\np 3 12\np 3 14\np 4 1\np 4 3\np 4"..., population = std::vector of length 50, capacity 64 = {{
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "-", "+", "walls", "walls", "rand", "fruit"}, size = 0},
+              xPosition = 0, yPosition = 5, prevX = 0, prevY = 4,
+              sumAllGameScores = 3408, numberOfGames = 17,
+              score = 200.470581}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"walls"},
+                size = 0}, xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "fruit"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"9.087030"},
+                size = 0}, xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+---Type <return> to continue, or q <return> to quit---
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "*", "/", "fruit", "walls", "fruit", "walls"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"*",
+                  "/", "*", "rand", "fruit", "walls", "7.402227"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "ghost"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"+", "*", "+",
+                  "rand", "rand", "ghost", "-3.285105"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"-",
+                  "*", "*", "fruit", "rand", "-1.196679", "rand"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"-",
+                  "/", "+", "walls", "pill", "pill", "pill"}, size = 0},
+---Type <return> to continue, or q <return> to quit---
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "walls"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"+", "*", "/",
+                  "-3.435997", "fruit", "5.125652", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"-",
+                  "+", "-", "fruit", "pill", "pill", "7.363247"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "/", "+", "8.312611", "pill", "walls", "rand"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "pill"}, size = 0}, xPosition = 0, yPosition = 0, prevX = 0,
+              prevY = 0, sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "-", "/", "ghost", "fruit", "ghost", "rand"}, size = 0},
+---Type <return> to continue, or q <return> to quit---
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "+", "+", "ghost", "rand", "ghost", "-9.433423"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "walls"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 12 = {"+",
+                  "-7.813590", "/", "", "", "pill", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"/",
+                  "-", "+", "ghost", "-2.551642", "walls", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "pill"}, size = 0}, xPosition = 0, yPosition = 0, prevX = 0,
+              prevY = 0, sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "fruit"}, size = 0}, xPosition = 0, yPosition = 0,
+---Type <return> to continue, or q <return> to quit---
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"pill"},
+                size = 0}, xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "pill"}, size = 0}, xPosition = 0, yPosition = 0, prevX = 0,
+              prevY = 0, sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "walls"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"+", "-", "+",
+                  "ghost", "walls", "rand", "walls"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "walls"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"+", "/", "+",
+                  "walls", "-2.459366", "walls", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+---Type <return> to continue, or q <return> to quit---
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 15, capacity 28 = {
+                  "*", "-9.586487", "/", "", "", "ghost", "*", "", "", "", "",
+                  "", "", "-0.794647", "pill"}, size = 0}, xPosition = 0,
+              yPosition = 0, prevX = 0, prevY = 0, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"/", "*", "-",
+                  "fruit", "pill", "-0.533634", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"*",
+                  "/", "/", "-7.255924", "walls", "rand", "ghost"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"-",
+                  "/", "/", "-3.953588", "ghost", "pill", "walls"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"/",
+                  "/", "/", "ghost", "ghost", "ghost", "fruit"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+---Type <return> to continue, or q <return> to quit---
+                  "rand"}, size = 0}, xPosition = 0, yPosition = 0, prevX = 0,
+              prevY = 0, sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "walls"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"rand"},
+                size = 0}, xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "2.966293"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"/", "+", "/",
+                  "fruit", "6.599110", "pill", "walls"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "*", "+", "pill", "walls", "ghost", "rand"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 29, capacity 56 = {
+                  "/", "3.992481", "-", "", "", "/", "+", "", "", "", "",
+---Type <return> to continue, or q <return> to quit---
+                  "rand", "ghost", "+", "ghost", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "ghost", "walls"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"/",
+                  "/", "+", "4.311598", "pill", "fruit", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"*",
+                  "-", "-", "ghost", "pill", "-4.955874", "walls"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "/", "/", "walls", "7.500986", "ghost", "pill"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "fruit"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 8 = {"/", "*", "*",
+                  "ghost", "pill", "fruit", "rand"}, size = 0}, xPosition = 0,
+              yPosition = 0, prevX = 0, prevY = 0, sumAllGameScores = 0,
+---Type <return> to continue, or q <return> to quit---
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 945, capacity 1888 = {"-",
+                  "ghost", "/", "", "", "walls", "*", "", "", "", "", "", "",
+                  "*", "fruit", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "fruit", "-", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "+", "/", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "*", "ghost", "/", "ghost", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  ""...}, size = 0}, xPosition = 0, yPosition = 0, prevX = 0,
+              prevY = 0, sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 8 = {"+",
+                  "/", "-", "pill", "fruit", "1.057501", "ghost"}, size = 0},
+              xPosition = 0, yPosition = 0, prevX = 0, prevY = 0,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 89, capacity 176 = {
+---Type <return> to continue, or q <return> to quit---
+                  "*", "/", "pill", "*", "/", "", "", "ghost", "*", "fruit",
+                  "/", "", "", "", "", "", "", "pill", "pill", "", "", "-",
+                  "*", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "-", "rand", "fruit", "-7.947179",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "fruit",
+                  "-6.672489"}, size = 0}, xPosition = 0, yPosition = 0,
+              prevX = 0, prevY = 0, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 5, capacity 8 = {"-", "-",
+                  "walls", "fruit", "fruit"}, size = 0}, xPosition = 0,
+              yPosition = 0, prevX = 0, prevY = 0, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 15, capacity 28 = {"/", "fruit",
+                  "/", "", "", "ghost", "*", "", "", "", "", "", "",
+                  "-9.387854", "walls"}, size = 0}, xPosition = 0,
+              yPosition = 0, prevX = 0, prevY = 0, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}},
+          ghostPopulation = std::vector of length 50, capacity 64 = {{
+              validator = {root = std::vector of length 7, capacity 7 = {"-",
+                  "-", "+", "rand", "rand", "pac", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+---Type <return> to continue, or q <return> to quit---
+              sumAllGameScores = 3372.29956, numberOfGames = 17,
+              score = 198.37056}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"*", "/", "+",
+                  "ghost", "pac", "ghost", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 701, capacity 701 = {"-", "/",
+                  "-6.736559", "5.432204", "*", "", "", "", "", "+", "pac",
+                  "", "", "", "", "", "", "", "", "rand", "-", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "*", "-", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "*",
+                  "rand", "-", "*", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "rand", "-4.304603",
+                  "", "", "pac", "pac", "-", "+", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", ""...}, size = 0}, prevX = 9, prevY = 14,
+              xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+---Type <return> to continue, or q <return> to quit---
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"pac"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"-5.217573"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"-8.539797"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"+", "-", "-",
+                  "rand", "pac", "pac", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "+", "+",
+                  "rand", "-1.613620", "3.582066", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 3, capacity 3 = {"+",
+                  "3.711765", "rand"}, size = 0}, prevX = 9, prevY = 14,
+---Type <return> to continue, or q <return> to quit---
+              xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"*", "+", "*",
+                  "pac", "-0.497458", "0.941930", "6.998034"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"*",
+                  "-", "-", "ghost", "ghost", "rand", "rand"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"-",
+                  "-", "/", "rand", "pac", "pac", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"*",
+                  "-", "/", "ghost", "rand", "ghost", "8.868145"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"-",
+                  "/", "-", "pac", "pac", "rand", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+---Type <return> to continue, or q <return> to quit---
+                  "pac"}, size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"*", "*", "+",
+                  "pac", "ghost", "rand", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"rand"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"*", "+", "+",
+                  "rand", "ghost", "pac", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "-", "-",
+                  "0.670744", "pac", "ghost", "8.967457"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 1, capacity 1 = {
+                  "ghost"}, size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+---Type <return> to continue, or q <return> to quit---
+                root = std::vector of length 7, capacity 7 = {"*", "/", "*",
+                  "ghost", "ghost", "5.377904", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"rand"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "-", "*",
+                  "rand", "ghost", "rand", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "*", "+",
+                  "pac", "ghost", "rand", "-3.255721"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"pac"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 27, capacity 27 = {"/",
+                  "0.332323", "/", "", "", "/", "rand", "", "", "", "", "pac",
+                  "*", "", "", "", "", "", "", "", "", "", "", "", "",
+---Type <return> to continue, or q <return> to quit---
+                  "5.038059", "-7.331366"}, size = 0}, prevX = 9, prevY = 14,
+              xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"rand"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"+", "-", "+",
+                  "rand", "rand", "ghost", "ghost"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"*", "/", "-",
+                  "0.821838", "ghost", "pac", "ghost"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"*", "/", "/",
+                  "pac", "6.985214", "pac", "rand"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 13, capacity 13 = {"/", "rand",
+                  "-", "", "", "+", "ghost", "", "", "", "", "pac", "ghost"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+---Type <return> to continue, or q <return> to quit---
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"3.982178"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"/", "+", "-",
+                  "rand", "ghost", "rand", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"4.339313"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "*", "*",
+                  "pac", "rand", "pac", "ghost"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 755, capacity 755 = {"/", "*",
+                  "ghost", "rand", "*", "", "", "", "", "ghost", "+", "", "",
+                  "", "", "", "", "", "", "", "", "+", "-", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "-", "-4.777520", "1.881433", "+", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+---Type <return> to continue, or q <return> to quit---
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "rand", "-8.387563", "", "", "", "",
+                  "*", "ghost", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "+", "ghost", "", "", "", "", "",
+                  "", "", "", "", "", ""...}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"pac"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 883, capacity 883 = {"/",
+                  "ghost", "/", "", "", "/", "ghost", "", "", "", "", "pac",
+                  "-", "", "", "", "", "", "", "", "", "", "", "", "", "-",
+                  "+", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "rand", "+", "+",
+                  "+", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+---Type <return> to continue, or q <return> to quit---
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "rand", "-4.823869", "/", "+", "-",
+                  "-6.509575", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", ""...}, size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 877, capacity 877 = {"-", "pac",
+                  "*", "", "", "/", "*", "", "", "", "", "ghost", "*", "+",
+                  "4.129924", "", "", "", "", "", "", "", "", "", "", "*",
+                  "+", "pac", "+", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "pac", "pac",
+                  "+", "ghost", "", "", "*", "/", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "/", "/", "",
+                  "", "", "", "", "", "+", "-", "rand", "rand", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+---Type <return> to continue, or q <return> to quit---
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", ""...}, size = 0}, prevX = 9, prevY = 14,
+              xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"+", "*", "*",
+                  "pac", "pac", "ghost", "pac"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "*", "/",
+                  "ghost", "ghost", "pac", "ghost"}, size = 0}, prevX = 9,
+              prevY = 14, xPosition = 9, yPosition = 14, sumAllGameScores = 0,
+              numberOfGames = 0, score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"ghost"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"/", "*", "+",
+                  "-6.074276", "-0.481114", "pac", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"/",
+---Type <return> to continue, or q <return> to quit---
+                  "+", "-", "ghost", "pac", "pac", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"*",
+                  "*", "/", "rand", "rand", "rand", "pac"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"+",
+                  "+", "-", "-3.851046", "pac", "9.866999", "rand"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 1, capacity 1 = {"ghost"},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 559, capacity 559 = {"+", "/",
+                  "+", "+", "ghost", "*", "pac", "+", "-", "", "", "pac", "*",
+                  "", "", "0.987139", "/", "*", "rand", "", "", "", "", "",
+                  "", "*", "/", "", "", "", "", "", "", "/", "rand",
+                  "9.045984", "ghost", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "pac", "/", "rand", "/", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "-", "*", "", "", "", "", "",
+---Type <return> to continue, or q <return> to quit---
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "+", "ghost", "", "", "*", "ghost", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "rand", "/", "-2.014081", "+", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                  "", "", "", "", "", "", "", "", "", "", "", "", ""...},
+                size = 0}, prevX = 9, prevY = 14, xPosition = 9,
+              yPosition = 14, sumAllGameScores = 0, numberOfGames = 0,
+              score = 0}, {validator = {
+                root = std::vector of length 7, capacity 7 = {"-", "+", "+",
+                  "9.778118", "ghost", "-8.168275", "ghost"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}, {
+              validator = {root = std::vector of length 7, capacity 7 = {"/",
+                  "*", "/", "pac", "ghost", "rand", "pac"}, size = 0},
+              prevX = 9, prevY = 14, xPosition = 9, yPosition = 14,
+              sumAllGameScores = 0, numberOfGames = 0, score = 0}}}
